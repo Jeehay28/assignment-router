@@ -27,11 +27,10 @@ export default function Router({ children }) {
     case '/about':
       componentToRender = <About />;
       break;
-    // Add more cases for other paths if needed
 
-    default:
-      componentToRender = <NotFound />;
-      break;
+    // default:
+    //   componentToRender = <NotFound />;
+    //   break;
   }
 
   return <div>{componentToRender}</div>;
