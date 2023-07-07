@@ -165,9 +165,11 @@ A full page reload can be slower and less efficient compared to using client-sid
 
 >> Git bash doesn't support an interactive terminal.
 
+>> ![](src/assets/images/gitbash_vite.png)
+
 - 문제를 잘못 파악해서 처음에 `react-router-dom` library를 사용해서 간단하게 구현했는데, 제한 조건을 점검하던 중, 문제의 의도가 library를 사용하지 않고 직접 `<Route>`, `<Router>`component를 만들어 사용하는 것이라는 것을 한참 후에 깨닫게 됐다. 😊
 
-- `window.history.pushState`를 사용여부의 차이가 궁금해서 `<a href="/about" onClick={navigateToAbout}>`와 `<a href='/'>`를 유관 상으로는 확인해 보았는데, 간단한 페이지라서 눈으로 확인할 수 있는 차이가 없었다. 
+- `window.history.pushState`를 사용여부의 차이가 궁금해서 `<a href="/about" onClick={navigateToAbout}>`와 `<a href='/'>`를 유관 상으로 확인해 보았는데, 간단한 페이지라서 눈으로 확인할 수 있는 차이가 없었다. 
 `window.history.pushState`를 사용하지 않아도, 페이지 이동도 가능하고 렌더링도 똑같이 가능하지만, 'a full page reload'가 발생해서 서버에서 'all resources (HTML, CSS, JavaScript, images, etc.)'를 다시 가져와야 된다고 하니, 왜 사용해야 하는지 이해하게 됐다.
 
 - 'a full page reload'는 CSR 렌더링보다 느리고 비효율적이라고 해서, CSR과 SPA의 밀접한 연관성을 확인해 보았다.
